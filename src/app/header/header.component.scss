@@ -1,0 +1,39 @@
+$height: 70px;
+.header{
+    height: $height;
+    background: url(../../assets/header-bgd.png) repeat;
+}
+
+.header__logo{
+    float: left;
+    margin: 21px 0 25px;
+}
+.header__nav{
+    float: right;
+    line-height: $height;
+}
+
+@media screen and (max-width: 768px) {
+    .header{
+        height: calc(#{$height} + 20px);
+    }
+    .header__logo, .header__nav {
+        float: none;
+        display: block;
+        margin: 0;
+        line-height:0;
+        padding-top: 15px;
+        text-align: center;
+    }
+    .header__nav{
+        margin-top: 5px;
+    }
+}
+@media screen and (max-width: 555px) {
+    .header{
+        height: calc(#{$height} - 20px);
+    }
+    .header__logo, .header__nav {
+        text-align: left;
+    }
+}

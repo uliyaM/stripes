@@ -1,0 +1,54 @@
+$green: #53a665;
+$bd-color: #ccc;
+$font-bree: 'Bree Serif', serif;
+.services{
+    display: flex;
+    justify-content: space-between;
+    padding: 55px 0 47px;
+    border-bottom: 1px solid $bd-color;
+    text-align: center;
+    .services__item{
+        width: 30%;
+        .services__item__icon {
+            height: 24px;
+            margin-bottom: 17px;
+        }
+        .services__item__title{
+            font-size: 1.5em;
+            line-height: 1.5em;
+            text-transform: uppercase;
+            font-family: $font-bree;
+            .services__item__title--color{
+                color: $green;
+            }
+        }
+        .services__item__text{
+            line-height: 1.5em;
+            overflow: hidden;
+        }
+        .services__item__more{
+            display: block;
+            margin: 8px auto 0;
+            background: $green;
+            color: #fff;
+            width: 60px;
+            line-height: 1.5em;
+            text-align: center;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .services{
+        flex-direction: column;
+        padding-bottom: 0;
+        .services__item{
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+}
+
+
+
+

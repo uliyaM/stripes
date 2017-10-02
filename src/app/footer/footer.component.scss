@@ -1,0 +1,29 @@
+.footer{
+    padding-top: 6px;
+    height: 35px;
+    .footer__copy{
+        float: left;
+        font-size: 0.625em;
+        color:#808080;
+    }
+    .footer__icons--social{
+        float: right;
+        .footer__icons__item{
+            display: inline-block;
+            margin-left: 12px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    .footer{
+        .footer__copy{
+            display: none;
+        }
+        .footer__icons--social{
+            float: none;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    }
+}

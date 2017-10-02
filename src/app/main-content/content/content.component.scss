@@ -1,0 +1,89 @@
+$green:#5a9e61;
+.content{
+    background: repeating-linear-gradient(
+                    to bottom,
+                    transparent,
+                    transparent 75px,
+                    rgba(0, 0, 0, 0.7) 80px,
+                    rgba(0, 0, 0, 0.7) 155px
+    ),
+    url(../../../assets/main-bgd.png);
+}
+.content--main{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    .content__box{
+        width: 40.5%;
+        .content__box__title{
+            font-size: 1.5em;
+            color:$green;
+            font-family: 'Bree Serif', serif;
+            text-transform: capitalize;
+            .content__box__title--margin{
+                display: inline-block;
+                margin-bottom: 5px;
+                background: #fff;
+            }
+        }
+        .content__box__text, .content__box__text--extended{
+            background: #fff;
+            margin: 15px 0 22px;
+            line-height: 1.5em;
+            .content__box__text--active{
+                color: $green;
+                text-decoration: underline;
+            }
+        }
+        .content__box__text--extended{
+            position: relative;
+            .content__box__text__more{
+                display: block;
+                position: absolute;
+                right: -7px;
+                bottom: -12px;
+                background: $green;
+                color: #fff;
+                width: 60px;
+                height: 24px;
+                text-align: center;
+            }
+        }
+    }
+    .content__video{
+        text-align: end;
+        width: 50%;
+        padding-top: 30px;
+        iframe{
+            width: 90%;
+            height: 245px;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content--main {
+        flex-direction: column;
+        .content__box, .content__video {
+            width: 100%;
+        }
+        .content__video {
+            order: 0;
+            padding-top: 0;
+            margin-bottom: 20px;
+            iframe{
+                width: 100%;
+            }
+        }
+        .content__box{
+            order: 1;
+        }
+    }
+}
+
+@media screen and (max-width: 555px) {
+    .content{
+        background: transparent;
+        padding-top: 155px;
+    }
+}
